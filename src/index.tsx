@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { CssBaseline } from '@mui/material';
+import reportWebVitals from './reportWebVitals';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme();
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container!);
+if (!container) throw new Error('Failed to find the root element');
+const root = createRoot(container); // Now we're sure container is not null
 
 root.render(
   <React.StrictMode>
-    <CssBaseline />
-    <Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
-    </Router>
+    </ThemeProvider>
   </React.StrictMode>
 );
+
+reportWebVitals();

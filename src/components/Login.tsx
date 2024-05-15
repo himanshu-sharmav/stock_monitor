@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { login } from '../services/api';
 import { TextField, Button, Container, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -41,6 +42,7 @@ const Login: React.FC = () => {
       <Button variant="contained" color="primary" onClick={handleLogin}>
         Login
       </Button>
+      <p>Don't have an account? <Link to="/register">Register</Link></p>
     </Container>
   );
 };

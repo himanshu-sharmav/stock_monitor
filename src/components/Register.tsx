@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { register } from '../services/api';
 import { TextField, Button, Container, Typography } from '@mui/material';
-
+import { Link, useNavigate } from 'react-router-dom';
 const Register: React.FC = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -46,6 +46,7 @@ const Register: React.FC = () => {
       <Button variant="contained" color="primary" onClick={handleRegister}>
         Register
       </Button>
+      <p>Already have an account? <Link to="/login">Login</Link></p>
     </Container>
   );
 };
