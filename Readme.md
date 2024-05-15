@@ -5,7 +5,7 @@ This project is a stock monitoring platform that allows users to create and mana
 ## Backend Architecture
 
 ### Database Schema
-The backend uses a simple database schema with two models:
+The backend uses a simple database schema with three models:
 - **User**: Represents a user of the platform. This model is provided by Django's built-in authentication system.
 - **Watchlist**: Represents a watchlist created by a user, containing a list of stock symbols.
 
@@ -29,26 +29,20 @@ The backend uses token-based authentication provided by Django REST Framework. U
 ## Installation and Setup
 
 ### Backend
-1. Clone the repository: `git clone`
-2. Navigate to the backend directory: `cd backend`
+1. Clone the repository: `git clone <repository_url>`
+2.  Install dependencies: `pip install -r requirements.txt`  
 3. Create a virtual environment: `python -m venv venv`
 4. Activate the virtual environment:
    - On Windows: `venv\Scripts\activate`
    - On macOS/Linux: `source venv/bin/activate`
-5. Install dependencies: `pip install -r requirements.txt`
-6. Set up environment variables:
-   - Create a `.env` file in the backend directory.
-   - Add the following variables:
-     ```
-     SECRET_KEY=<your_secret_key>
-     DEBUG=True
-     ```
-7. Apply database migrations: `python manage.py migrate`
-8. Run the development server: `python manage.py runserver`
-9. The backend will be accessible at `http://localhost:8000`
+5. Navigate to the backend directory: `cd stock_monitor`
+
+6. Apply database migrations: `python manage.py migrate`
+7. Run the development server: `python manage.py runserver`
+8. The backend will be accessible at `http://localhost:8000`
 
 ### Frontend
-1. Navigate to the frontend directory: `cd frontend`
+1. Navigate to the frontend directory: `cd src`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. The frontend will be accessible at `http://localhost:3000`
