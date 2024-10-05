@@ -8,7 +8,7 @@ import requests
 from rest_framework.permissions import IsAuthenticated
 
 
-ALPHA_VANTAGE_API_KEY = '32VI0XO1484YPIAN'
+ALPHA_VANTAGE_API_KEY = 'API-KEY'
 ALPHA_VANTAGE_BASE_URL = 'https://www.alphavantage.co/query'
 
 
